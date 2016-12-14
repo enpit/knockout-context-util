@@ -19,5 +19,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "3.1.0",
+    "knockout": "3.4.0",
+    "requirejs": "2.1.16"
+  }
 }
