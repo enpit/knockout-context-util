@@ -49,6 +49,6 @@ A query selector string (see the [jQuery docs](https://api.jquery.com/category/s
 
 Creates a knockout-context-util module with the given `bodySelector`, i.e. this module's `getRoot` function then returns the knockout context identified by `bodySelector`.
 
-#### elementAccessor
+#### bodySelector
 
 A query selector string (see the [jQuery docs](https://api.jquery.com/category/selectors/) for more information about these).
