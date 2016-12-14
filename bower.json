@@ -1,0 +1,23 @@
+{
+  "name": "knockout-context-util",
+  "main": "knockout-context-util.js",
+  "homepage": "https://github.com/enpit/knockout-context-util",
+  "authors": [
+    "Janis Krasemann <janis.krasemann@enpit.de>"
+  ],
+  "description": "Module that provides utility functions for accessing a model's knockout context",
+  "keywords": [
+    "knockout",
+    "jet",
+    "oracle-jet",
+    "utility"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
