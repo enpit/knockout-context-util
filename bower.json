@@ -1,5 +1,6 @@
 {
   "name": "knockout-context-util",
+  "version": "1.0.0",
   "main": "knockout-context-util.js",
   "homepage": "https://github.com/enpit/knockout-context-util",
   "authors": [
