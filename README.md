@@ -52,3 +52,7 @@ Creates a knockout-context-util module with the given `bodySelector`, i.e. this 
 #### bodySelector
 
 A query selector string (see the [jQuery docs](https://api.jquery.com/category/selectors/) for more information about these).
+
+## License
+
+MIT © [enpit GmbH & Co. KG](http://www.enpit.de/)
