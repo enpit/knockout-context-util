@@ -9,14 +9,35 @@ define(['knockout-context-util'], function (kocoUtil) {
   var productSelector = '#productId';
   var productContext = kocoUtil.getContext(productSelector);
   var productViewModel = kocoUtil.getViewModel(productSelector); // === productContext.$data
+});
+```
 
-  // if your root viewModel is not attached to the HTML body but some other element:
-  var bodySelector = '#myRoot';
-  kocoUtil.create(bodySelector);
+### Passing your root selector to the module
+
+If your root viewModel is not attached to the HTML body but some other element, you can pass the root selector to the module by passing a config object to the `requirejs.config` call:
+
+``` js
+requirejs.config({
+  paths: {
+    'knockout': 'libs/knockout/knockout-3.4.0',
+    'jquery': 'libs/jquery/jquery-3.1.0.min',
+    /* ... */
+    'knockoutContextUtil': 'libs/knockout-context-util/knockout-context-util'
+  }
+  config: {
+    knockoutContextUtil: {
+      bodySelector: '#myRoot' // your custom body selector
+    }
+  }
+});
+```
+
+You can then use the `getRoot` function to access that particular context:
+
+``` js
   rootContext = kocoUtil.getRoot();
   // same as:
-  rootContext = kocoUtil.getContext(bodySelector);
-});
+  rootContext = kocoUtil.getContext('#myRoot');
 ```
 
 ## API
