@@ -1,6 +1,42 @@
 # knockout-context-util
 Module that provides utility functions for accessing a model's knockout context
 
+## Installation
+
+``` cli
+bower install --save knockout-context-util
+```
+
+In scripts/grunt/config/bowercopy.js add this to the third-party files near the bottom of the file:
+
+``` js
+"knockout-context-util": "knockout-context-util/knockout-context-util.js"
+```
+
+If you run grunt bowercopy now, you should see the knockout-context-helper folder in your js libs folder. Add a reference to the js file in that folder to your requirejs config in both the main.js and main-release-paths.json files:
+
+``` js
+'knockoutContextUtil': 'libs/knockout-context-util/knockout-context-util'
+```
+
+If your root viewModel is not attached to the HTML body but some other element, you can pass the root selector to the module by passing a config object to the requirejs.config call:
+
+``` js
+requirejs.config({
+  paths: {
+    'knockout': 'libs/knockout/knockout-3.4.0',
+    'jquery': 'libs/jquery/jquery-3.1.0.min',
+    /* ... */
+    'knockoutContextUtil': 'libs/knockout-context-util/knockout-context-util'
+  }
+  config: {
+    knockoutContextUtil: {
+      bodySelector: '#myRoot' // your custom body selector
+    }
+  }
+});
+```
+
 ## Usage
 
 ``` js
