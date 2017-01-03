@@ -24,7 +24,7 @@ define(['knockout', 'jquery'], function (ko, $) {
     }
   };
 
-  var createGetViewModel = function createGetViewModel () {
+  var createGetViewModel = function createGetViewModel (getContext) {
     return function getViewModel (elementAccessor) {
       var viewModel;
       var context = getContext(elementAccessor);
@@ -37,7 +37,7 @@ define(['knockout', 'jquery'], function (ko, $) {
     };
   };
 
-  var createGetRoot = function createGetRoot (bodySelector) {
+  var createGetRoot = function createGetRoot (getContext, bodySelector) {
     if (typeof bodySelector !== 'string') {
       bodySelector = defaultBodySelector;
     }
@@ -53,6 +53,7 @@ define(['knockout', 'jquery'], function (ko, $) {
       }
 
       root = context.$root;
+
       if (!root) {
         return;
       }
@@ -61,15 +62,16 @@ define(['knockout', 'jquery'], function (ko, $) {
     }
   };
 
+  var getContext = createGetContext();
   var module = {
-    getContext: createGetContext(),
-    getRoot: createGetRoot(),
-    getViewModel: createGetViewModel()
+    getContext: getContext,
+    getRoot: createGetRoot(getContext),
+    getViewModel: createGetViewModel(getContext)
   }
 
   module.create = function create (bodySelector) {
     return $.extend({}, module, {
-      getRoot: createGetRoot(bodySelector)
+      getRoot: createGetRoot(module.getContext, bodySelector)
     });
   };
 
