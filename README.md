@@ -19,24 +19,6 @@ If you run grunt bowercopy now, you should see the knockout-context-helper folde
 'knockoutContextUtil': 'libs/knockout-context-util/knockout-context-util'
 ```
 
-If your root viewModel is not attached to the HTML body but some other element, you can pass the root selector to the module by passing a config object to the requirejs.config call:
-
-``` js
-requirejs.config({
-  paths: {
-    'knockout': 'libs/knockout/knockout-3.4.0',
-    'jquery': 'libs/jquery/jquery-3.1.0.min',
-    /* ... */
-    'knockoutContextUtil': 'libs/knockout-context-util/knockout-context-util'
-  }
-  config: {
-    knockoutContextUtil: {
-      bodySelector: '#myRoot' // your custom body selector
-    }
-  }
-});
-```
-
 ## Usage
 
 ``` js
