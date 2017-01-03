@@ -9,6 +9,7 @@
         "define": true
     },
     "rules": {
-      "no-amd": 0
+      "no-amd": 0,
+      "semi": ["error", "always"]
     }
 }
