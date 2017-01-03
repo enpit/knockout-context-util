@@ -10,7 +10,7 @@ bower install --save knockout-context-util
 In scripts/grunt/config/bowercopy.js add this to the third-party files near the bottom of the file:
 
 ``` js
-"knockout-context-util": "knockout-context-util/knockout-context-util.js"
+'knockout-context-util': 'knockout-context-util/knockout-context-util.js'
 ```
 
 If you run grunt bowercopy now, you should see the knockout-context-helper folder in your js libs folder. Add a reference to the js file in that folder to your requirejs config in both the main.js and main-release-paths.json files:
