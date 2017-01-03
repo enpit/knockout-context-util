@@ -1,0 +1,14 @@
+{
+    "extends": "standard",
+    "installedESLint": true,
+    "plugins": [
+        "standard",
+        "promise"
+    ],
+    "globals": {
+        "define": true
+    },
+    "rules": {
+      "no-amd": 0
+    }
+}
