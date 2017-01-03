@@ -26,19 +26,13 @@ define(['module', 'knockout', 'jquery'], function (module, ko, $) {
       }
 
       return context;
-    }
+    };
   };
 
   var createGetViewModel = function createGetViewModel (getContext) {
     return function getViewModel (elementAccessor) {
-      var viewModel;
       var context = getContext(elementAccessor);
-      if (context) {
-        viewModel = context.$data;
-      } else {
-        viewModel = {};
-      }
-      return viewModel;
+      return context ? context.$data : {};
     };
   };
 
@@ -64,7 +58,7 @@ define(['module', 'knockout', 'jquery'], function (module, ko, $) {
       }
 
       return root;
-    }
+    };
   };
 
   var getContext = createGetContext();
