@@ -50,19 +50,19 @@ requirejs.config({
 });
 ```
 
-You can then use the `getRoot` function to access that particular context:
+You can then use the `getRoot` function to access the data of that particular element's context:
 
 ``` js
   rootContext = kocoUtil.getRoot();
-  // same as:
-  rootContext = kocoUtil.getContext('#myRoot');
+  // returns the same as:
+  rootContext = kocoUtil.getContext('#myRoot').$data;
 ```
 
 ## API
 
 ### getRoot()
 
-Returns the knockout context of the root viewModel, or `undefined` if no root context was found.
+Returns the data of the knockout context of the root viewModel, or `undefined` if no root context was found.
 
 ### getContext(elementAccessor)
 
