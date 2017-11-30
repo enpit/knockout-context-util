@@ -1,0 +1,23 @@
+{
+  "name": "knockout-context-util",
+  "version": "0.0.0",
+  "description": "Module that provides utility functions for accessing a model's knockout context",
+  "main": "knockout-context-util.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enpit/knockout-context-util.git"
+  },
+  "author": "Janis Krasemann <krasemann.janis@gmail.com> (http://www.github.com/janis-kra)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enpit/knockout-context-util/issues"
+  },
+  "homepage": "https://github.com/enpit/knockout-context-util#readme",
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1"
+  },
+  "dependencies": {}
+}

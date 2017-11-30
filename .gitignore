@@ -39,5 +39,3 @@ jspm_packages
 # bower stuff
 bower_components
 
-package.json
-yarn.lock
