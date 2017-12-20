@@ -1,15 +1,15 @@
-define(['module', 'knockout', 'jquery'], (module, ko, $) => {
-  let defaultBodySelector;
+define(['module', 'knockout', 'jquery'], function (module, ko, $) {
+  var defaultBodySelector;
   if (module && typeof module.config === 'function' && typeof module.config().bodySelector === 'string') {
     defaultBodySelector = module.config().bodySelector;
   } else {
     defaultBodySelector = 'body';
   }
 
-  const createGetContext = function createGetContext() {
-    return function getContext(elementAccessor) {
-      let context;
-      let element;
+  const createGetContext = function createGetContext () {
+    return function getContext (elementAccessor) {
+      var context;
+      var element;
 
       if (!elementAccessor) {
         return;
@@ -29,21 +29,21 @@ define(['module', 'knockout', 'jquery'], (module, ko, $) => {
     };
   };
 
-  const createGetViewModel = function createGetViewModel(getContext) {
-    return function getViewModel(elementAccessor) {
-      const context = getContext(elementAccessor);
+  const createGetViewModel = function createGetViewModel (getContext) {
+    return function getViewModel (elementAccessor) {
+      var context = getContext(elementAccessor);
       return context ? context.$data : {};
     };
   };
 
-  const createGetRoot = function createGetRoot(getContext, bodySelector) {
+  const createGetRoot = function createGetRoot (getContext, bodySelector) {
     if (typeof bodySelector !== 'string') {
       bodySelector = defaultBodySelector;
     }
 
-    return function getRoot() {
-      let context;
-      let root;
+    return function getRoot () {
+      var context;
+      var root;
 
       context = getContext(bodySelector);
 
@@ -61,9 +61,9 @@ define(['module', 'knockout', 'jquery'], (module, ko, $) => {
     };
   };
 
-  const getContext = createGetContext();
+  var getContext = createGetContext();
   return {
-    getContext,
+    getContext: getContext,
     getRoot: createGetRoot(getContext),
     getViewModel: createGetViewModel(getContext)
   };

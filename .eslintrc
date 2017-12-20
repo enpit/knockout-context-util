@@ -1,6 +1,6 @@
 {
     "extends": "standard",
-    "installedESLint": true,
+    "parserOptions": { "ecmaVersion": 5 },
     "plugins": [
         "standard",
         "promise"
