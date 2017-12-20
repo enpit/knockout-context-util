@@ -1,6 +1,6 @@
 {
   "name": "knockout-context-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Module that provides utility functions for accessing a model's knockout context",
   "main": "knockout-context-util.js",
   "repository": {
